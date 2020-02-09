@@ -60,8 +60,14 @@ class nonogram():
                 self.show_board()
         if show:
             self.show_board()
-    def show_board(self):
-        sns.heatmap(self.gameboard * -1, cbar=False)
+    def show_board(self, no_labels=True):
+        ax = sns.heatmap(self.gameboard * -1, cbar=False)
+        if no_labels:
+            ax.tick_params(
+                left=False, 
+                labelleft=False,
+                bottom=False, 
+                labelbottom=False)
         plt.show()
 
 class row():

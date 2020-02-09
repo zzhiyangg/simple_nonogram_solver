@@ -1,7 +1,7 @@
 from nonogram import *
 
 def main():
-    puzzle_file = 'nonogram.csv'
+    puzzle_file = 'nonogram2.csv'
     nng = nonogram(puzzle_file)
     nng.solve()
 
